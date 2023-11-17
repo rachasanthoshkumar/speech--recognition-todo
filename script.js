@@ -24,4 +24,7 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
   }
 
 }
+else{
+  window.alert("your browser does not support speech recognition")
+}
 
