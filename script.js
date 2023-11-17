@@ -12,6 +12,9 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
    addTask();
   }
   function addTask(){
+    if(taskInput.value==''){
+      return;
+    }
     const markup = document.createElement('li');
     markup.innerHTML = `<div><li>${taskInput.value}</li><button onclick="deleteTask(this)" id='deleteTaskbtn'>${deleteButtonContent}</button></div>`;
     ul.appendChild(markup);
